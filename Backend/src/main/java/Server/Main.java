@@ -3,10 +3,9 @@ package Server;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @SpringBootApplication()
 @RestController
@@ -17,6 +16,11 @@ public class Main {
 
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
+    }
+
+    @GetMapping("/boeken")
+    public List<Boek> getBooks(){
+        return (List<Boek>) boekRepository.findAll();
     }
 
     @PostMapping(path = "/boek")
