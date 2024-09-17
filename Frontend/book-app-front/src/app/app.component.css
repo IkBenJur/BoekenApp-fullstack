@@ -6,19 +6,19 @@
   gap: 2rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   .wrapper {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .wrapper {
     grid-template-columns: repeat(4, 1fr);
   }
