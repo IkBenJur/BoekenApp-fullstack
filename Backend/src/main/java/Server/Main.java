@@ -25,6 +25,7 @@ public class Main {
     }
 
     @PostMapping(path = "/boek")
+    @CrossOrigin
     public @ResponseBody String addNewBook(@RequestParam String titel, @RequestParam String auteur, @RequestParam int aantalExemplaren, @RequestParam String afbeeldingURL) {
         Boek n = new Boek();
         n.setTitle(titel);
@@ -33,5 +34,21 @@ public class Main {
         n.setAfbeeldingURL(afbeeldingURL);
         boekRepository.save(n);
         return "Created new book with title: " + n.getTitle() + " from author: " + n.getAuthor();
+    }
+
+
+    @PostMapping(path = "/boeken")
+    @CrossOrigin
+    public @ResponseBody String addNewBooks(@RequestBody List<Boek> boeken) {
+        for (Boek boek : boeken) {
+            Boek n = new Boek();
+            n.setTitle(boek.getTitle());
+            n.setAuthor(boek.getAuthor());
+            n.setAantalExemplaren(boek.getAantalExemplaren());
+            n.setAfbeeldingURL(boek.getAfbeeldingURL());
+            boekRepository.save(n);
+        }
+
+        return "Created " + boeken.size() + " new books";
     }
 }
