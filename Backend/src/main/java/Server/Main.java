@@ -19,6 +19,7 @@ public class Main {
     }
 
     @GetMapping("/boeken")
+    @CrossOrigin
     public List<Boek> getBooks(){
         return (List<Boek>) boekRepository.findAll();
     }
