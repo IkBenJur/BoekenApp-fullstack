@@ -1,0 +1,21 @@
+.book-tile {
+    background-color: #92AFD7;
+    padding: 0.5rem;
+    border-radius: 20px;
+    width: 18rem;
+}
+
+.book-image {
+    display: block;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.book-info {
+    padding: 1rem 0.5rem;
+}
+
+.exemplaren {
+    font-size: small;
+    font-weight: 300;
+}

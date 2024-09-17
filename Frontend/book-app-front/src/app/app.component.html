@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Books</title>
-</head>
-<body>
-  Hello world
-  <app-book-tile 
-    *ngFor="let book of books"
-    [book]="book"
-  ></app-book-tile>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books</title>
+  </head>
+  <body>
+    <app-header></app-header>
+    <main class="wrapper">
+      <app-book-tile style="margin: 0 auto;" *ngFor="let book of books" [book]="book"></app-book-tile>
+    </main>
+  </body>
 </html>

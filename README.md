@@ -4,5 +4,5 @@
 
 - [X] Create spring boot with database connection
 - [X] Create angular start
-- [ ] Populate database
-- [ ] Add styling
+- [X] Populate database
+- [X] Add styling

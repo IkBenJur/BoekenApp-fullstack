@@ -4,11 +4,12 @@ import { BookTileComponent } from './book-tile/book-tile.component';
 import { BookInterface } from './book-interface';
 import { BooksService } from './books.service';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "./header/header.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, BookTileComponent, CommonModule],
+  imports: [RouterOutlet, BookTileComponent, CommonModule, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

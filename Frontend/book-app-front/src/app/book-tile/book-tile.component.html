@@ -1,3 +1,12 @@
 <section class="book-tile">
-    <p>{{ book.title }}</p>
+  <img
+    class="book-image"
+    src="{{ book.afbeeldingURL }}"
+    alt="Book afbeelding: {{ book.title }}"
+  />
+  <div class="book-info">
+    <h2>{{ book.title }}</h2>
+    <p>{{ book.author }}</p>
+    <p class="exemplaren">Aantal exemplaren: {{ book.aantalExemplaren }}</p>
+  </div>
 </section>
